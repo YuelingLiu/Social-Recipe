@@ -14,7 +14,7 @@ import Leftbar from './components/leftBar/Leftbar';
 import Rightbar from './components/rightBar/Rightbar';
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
 
   const Layout = () => {
     return (
@@ -29,7 +29,7 @@ function App() {
   };
 
   const ProtectedRoute = ({ children }) => {
-    if (currentUser) {
+    if (!currentUser) {
       return <Navigate to="/login"></Navigate>;
     }
 
