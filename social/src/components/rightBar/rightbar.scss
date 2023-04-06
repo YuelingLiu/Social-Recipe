@@ -1,0 +1,74 @@
+.rightBar {
+  flex: 3;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .container {
+    padding: 20px;
+    .item {
+      -webkit-box-shadow: 3px 6px 13px 0px rgba(217, 213, 217, 1);
+      -moz-box-shadow: 3px 6px 13px 0px rgba(217, 213, 217, 1);
+      box-shadow: 3px 6px 13px 0px rgba(217, 213, 217, 1);
+      margin: 20px;
+      span {
+        color: gray;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0px; // means top and button 20px. l and r is 0
+        .userInfo {
+          display: flex;
+          justify-items: center;
+          gap: 20px;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .online {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: limegreen;
+            position: absolute;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+
+        p {
+          color: gray;
+        }
+        .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          border-radius: 5px;
+
+          button {
+            border: none;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+
+            &:first-child {
+              background-color: #5271ff;
+            }
+
+            &:last-child {
+              background-color: #f0544f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

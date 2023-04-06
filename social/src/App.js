@@ -20,10 +20,13 @@ function App() {
     return (
       <div>
         <Navbar />
-        <div style={{ display: 'flex' }}></div>
-        <Outlet />
-        <Leftbar />
-        <Rightbar />
+        <div style={{ display: 'flex' }}>
+          <Leftbar />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
+          <Rightbar />
+        </div>
       </div>
     );
   };
